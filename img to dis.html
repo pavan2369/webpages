@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image Description</title>
+    <style>
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .image-description {
+            display: none;
+            top: 100%;
+            width: 700px;
+            padding: 15px;
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+        }
+
+        img {
+            border: 2px solid black;
+            height: 400px;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image-container">
+        <h2 style="text-align: center;">Parrot</h2>
+        <img src="https://images.unsplash.com/photo-1592089416462-2b0cb7da8379?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cGFycm90fGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60"
+            alt="Image">
+        <div class="image-description">
+            <h3 style="text-align: center;">Description of the Parrot Image</h3>
+            <p>The parrot is a colorful and intelligent bird found in tropical and subtropical regions around the world.
+                They are known for their ability to mimic human speech and sounds.</p>
+        </div>
+    </div>
+
+    <script>
+        var image = document.querySelector(".image-container img");
+        var description = document.querySelector(".image-description");
+
+        image.addEventListener("click", function() {
+            description.style.display = (description.style.display === "none") ? "block" : "none";
+        });
+    </script>
+</body>
+
+</html>
